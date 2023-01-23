@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Cart UI Design Tutorial</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <div class="big-image" id="zoom">
+                <img src="img1.png" alt=""> 
+            </div>
+
+            <div class="small-images">
+                <img src="img2.png" alt="">
+                <img src="img3.png" alt="">
+                <video width="360" height="320" autoplay="autoplay">
+                    <source src="video.mp4" type="video/mp4" />
+                  </video>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Suni deri trençkot</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non fuga at obcaecati recusandae, repudiandae explicabo. Esse magnam libero, at mollitia autem omnis.
+                 Rerum maxime soluta porro molestiae, odit cum earum!</p>
+                 <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                        
+        
+
+                 <div class="price">€1,000- <span>1,400-</span></div>
+
+                 <ul>
+                    <li> <h4>Kaplama</h4> <p>100% poliüretan</p> </li>
+                    <li><h4>  Fon Kumaşı</h4> <p>100% polyester </p></li>
+                    <li><h4>  Astar </h4> <p>100% polyester</p></li>
+                 </ul>
+                
+                    <a href="#"><button>add to cart <i class="fas fa-shopping-cart"></i>
+                  </button></a>
+                
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+
+     integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6" crossorigin="anonymous">
+
+</script>
+<script src="zoomsl.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.small-images img').click(function(){
+           var image = $(this).attr('src');
+           $('.big-image img').attr('src', image);
+          });
+          $('zoom').imagezoomsl(
+            {
+                zoomrang:[4,4]
+            }
+          );
+        });
+    </script>
+</body>
+</html>
